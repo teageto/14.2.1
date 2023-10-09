@@ -29,9 +29,10 @@ fetch(URL)
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">Someone famous in </footer>
               </blockquote>
+              <button type="button" class="btn btn-secondary more-info-btn">More Info</button>
             </div>
           </div>
-          `
+          `;
           dataContainer.appendChild(div);
         } else if(`${item.genres}`.toLowerCase().includes(inptValue)) {
           div.innerHTML = `
@@ -44,9 +45,10 @@ fetch(URL)
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">Someone famous in </footer>
               </blockquote>
+              <button type="button" class="btn btn-secondary more-info-btn">More Info</button>
             </div>
           </div>
-          `
+          `;
           dataContainer.appendChild(div);
       } else if(`${item.tagline}`.toLowerCase().includes(inptValue)) {
         div.innerHTML = `
@@ -59,9 +61,10 @@ fetch(URL)
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">Someone famous in </footer>
             </blockquote>
+            <button type="button" class="btn btn-secondary more-info-btn">More Info</button>
           </div>
         </div>
-        `
+        `;
         dataContainer.appendChild(div); 
       } else if(`${item.overview}`.toLowerCase().includes(' '+inptValue+' ')) {
         div.innerHTML = `
@@ -74,12 +77,37 @@ fetch(URL)
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">Someone famous in </footer>
             </blockquote>
+            <button type="button" class="btn btn-secondary more-info-btn">More Info</button>
           </div>
         </div>
-        `
+        `;
         dataContainer.appendChild(div);
       };
     });
     });
   });
 });
+/* Esto esta mal, lo voy a implementar bien maniana xD
+function offCanvas(){
+  let dataCanvas = document.getElementById('canvasoff');
+  let divCan = document.createElement('div');
+  
+  divCan.innerHTML = `
+  <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ${item.overview}
+    </div>
+  </div>
+  `;
+  };
+
+  
+
+  dataCanvas.appendChild(divCan);
+
+  dataItem.addEventListener('click', offCanvas());
+*/

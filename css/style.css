@@ -26,3 +26,8 @@ main {
 .offcanvas-top{
     height: fit-content;
 }
+
+.more-info-btn {
+    align-items: end;
+    display: flex;
+}
