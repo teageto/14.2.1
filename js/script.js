@@ -25,21 +25,29 @@ fetch(URL)
             <div class="card-header">
             ${item.title}
             </div>
-              <div class="card-body">
+              <div class="card-body row row-cols-lg-auto g-3">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
-                <footer class="blockquote-footer">Someone famous in </footer>
+                <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-              ${data.overview}
+                <figure>
+                  <blockquote class="blockquote">
+                    <p>${item.overview}</p>
+                  </blockquote>
+                  <hr>
+                  <figcaption class="blockquote-footer">
+                  ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                  </figcaption>
+                </figure>
               <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
                 Dropdown button
               </button>
               <ul class="dropdown-menu">
@@ -59,21 +67,29 @@ fetch(URL)
             <div class="card-header">
             ${item.title}
             </div>
-              <div class="card-body">
+              <div class="card-body row row-cols-lg-auto g-3">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
-                <footer class="blockquote-footer">Someone famous in </footer>
+                <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+              <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-              ${data.overview}
+                <figure>
+                  <blockquote class="blockquote">
+                    <p>${item.overview}</p>
+                  </blockquote>
+                  <hr>
+                  <figcaption class="blockquote-footer">
+                  ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                  </figcaption>
+                </figure>
               <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
                 Dropdown button
               </button>
               <ul class="dropdown-menu">
@@ -93,21 +109,29 @@ fetch(URL)
           <div class="card-header">
           ${item.title}
           </div>
-            <div class="card-body">
+            <div class="card-body row row-cols-lg-auto g-3">
             <blockquote class="blockquote mb-0">
               <p>${item.tagline}</p>
-              <footer class="blockquote-footer">Someone famous in </footer>
+              <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-              ${data.overview}
+              <figure>
+                <blockquote class="blockquote">
+                  <p>${item.overview}</p>
+                </blockquote>
+                <hr>
+                <figcaption class="blockquote-footer">
+                ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                </figcaption>
+              </figure>
               <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
                 Dropdown button
               </button>
               <ul class="dropdown-menu">
@@ -127,21 +151,29 @@ fetch(URL)
           <div class="card-header">
           ${item.title}
           </div>
-            <div class="card-body">
+            <div class="card-body row row-cols-lg-auto g-3">
             <blockquote class="blockquote mb-0">
               <p>${item.tagline}</p>
-              <footer class="blockquote-footer">Someone famous in </footer>
+              <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <button class="btn btn-secondary col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
             <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
               <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasTopLabel">Offcanvas top</h5>
+                <h2class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
               <div class="offcanvas-body">
-              ${data.overview}
+              <figure>
+                <blockquote class="blockquote">
+                  <p>${item.overview}</p>
+                </blockquote>
+                <hr>
+                <figcaption class="blockquote-footer">
+                  ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                </figcaption>
+              </figure>
               <div class="dropdown mt-3">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
                 Dropdown button
               </button>
               <ul class="dropdown-menu">

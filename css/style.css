@@ -31,3 +31,12 @@ main {
     align-items: end;
     display: flex;
 }
+
+.card{
+    width: 80%;
+    height: 80%;
+    float: inline-start;
+    margin-left: 10em;
+    background-color: grey;
+    color: whitesmoke;
+}
