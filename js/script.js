@@ -46,9 +46,6 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                   </figcaption>
                 </figure>
-                <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                  Popover on bottom
-                </button>
             </div>
             </div>
           </div>
@@ -81,9 +78,6 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                   </figcaption>
                 </figure>
-                <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                 Popover on bottom
-                </button>
             </div>
             </div>
           </div>
@@ -116,9 +110,6 @@ fetch(URL)
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                 </figcaption>
               </figure>
-              <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                Popover on bottom
-              </button>
             </div>
           </div>
         </div>
@@ -151,9 +142,6 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                 </figcaption>
               </figure>
-              <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
-                Popover on bottom
-              </button>
             </div>
           </div>
         </div>
