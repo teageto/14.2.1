@@ -30,7 +30,7 @@ fetch(URL)
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
               <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
@@ -46,16 +46,9 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                   </figcaption>
                 </figure>
-              <div class="dropdown mt-3">
-              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-              </div>
+                <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                  Popover on bottom
+                </button>
             </div>
             </div>
           </div>
@@ -72,7 +65,7 @@ fetch(URL)
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
               <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
@@ -88,16 +81,9 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                   </figcaption>
                 </figure>
-              <div class="dropdown mt-3">
-              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Dropdown button
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-              </div>
+                <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                 Popover on bottom
+                </button>
             </div>
             </div>
           </div>
@@ -114,7 +100,7 @@ fetch(URL)
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
             <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
@@ -130,16 +116,9 @@ fetch(URL)
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                 </figcaption>
               </figure>
-              <div class="dropdown mt-3">
-              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Dropdown button
+              <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                Popover on bottom
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -156,7 +135,7 @@ fetch(URL)
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <button class="btn btn-secondary float-end col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
             <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
               <div class="offcanvas-header">
                 <h2class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
@@ -172,16 +151,9 @@ fetch(URL)
                   ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
                 </figcaption>
               </figure>
-              <div class="dropdown mt-3">
-              <button class="btn btn-secondary col-2 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Dropdown button
+              <button type="button" class="btn btn-secondary float-end" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover">
+                Popover on bottom
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-              </div>
             </div>
           </div>
         </div>
