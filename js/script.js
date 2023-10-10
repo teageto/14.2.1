@@ -21,17 +21,17 @@ fetch(URL)
       div.classList.add('dataItem');
         if(`${item.title}`.toLowerCase().includes(inptValue)) {
           div.innerHTML = `
-          <div class="card text-bg-primary mb-3">
+          <div class="card">
             <div class="card-header">
             ${item.title}
             </div>
-              <div class="card-body row row-cols-lg-auto g-3">
+              <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
+              <button class="btn btn-secondary float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <div class="offcanvas offcanvas-top text-bg-light p-3" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -56,17 +56,17 @@ fetch(URL)
           dataContainer.appendChild(div);
         } else if(`${item.genres}`.toLowerCase().includes(inptValue)) {
           div.innerHTML = `
-          <div class="card text-bg-primary mb-3">
+          <div class="card">
             <div class="card-header">
             ${item.title}
             </div>
-              <div class="card-body row row-cols-lg-auto g-3">
+              <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
                 <footer class="blockquote-footer">${item.vote_average}</footer>
               </blockquote>
-              <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-              <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
+              <button class="btn btn-secondary float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+              <div class="offcanvas offcanvas-top text-bg-light p-3" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -91,17 +91,17 @@ fetch(URL)
           dataContainer.appendChild(div);
       } else if(`${item.tagline}`.toLowerCase().includes(inptValue)) {
         div.innerHTML = `
-        <div class="card text-bg-primary mb-3">
+        <div class="card">
           <div class="card-header">
           ${item.title}
           </div>
-            <div class="card-body row row-cols-lg-auto g-3">
+            <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary float-end col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
+            <button class="btn btn-secondary float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <div class="offcanvas offcanvas-top text-bg-light p-3" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel" style="color: rgb(rgb(29, 29, 29));">
               <div class="offcanvas-header">
                 <h2 class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -126,17 +126,17 @@ fetch(URL)
         dataContainer.appendChild(div); 
       } else if(`${item.overview}`.toLowerCase().includes(' '+inptValue+' ')) {
         div.innerHTML = `
-        <div class="card text-bg-primary mb-3">
+        <div class="card">
           <div class="card-header">
           ${item.title}
           </div>
-            <div class="card-body row row-cols-lg-auto g-3">
+            <div class="card-body">
             <blockquote class="blockquote mb-0">
               <p>${item.tagline}</p>
               <footer class="blockquote-footer">${item.vote_average}</footer>
             </blockquote>
-            <button class="btn btn-secondary float-end col-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
-            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <button class="btn btn-secondary float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">More Info</button>
+            <div class="offcanvas offcanvas-top text-bg-light p-3" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
               <div class="offcanvas-header">
                 <h2class="offcanvas-title" id="offcanvasTopLabel">${item.title}</h2>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
