@@ -53,11 +53,11 @@ fetch(URL)
                   <hr>
                   <figcaption class="blockquote-footer">
                     ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
-                    <div class="btn-group">
-                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    <div class="btn-group ">
+                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
                       More Info
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <ul class="dropdown-menu">
                       <li><a class="dropdown-item">Year: ${YEAR}</a></li>
                       <li><a  class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
                       <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
@@ -98,8 +98,8 @@ fetch(URL)
                   <hr>
                   <figcaption class="blockquote-footer">
                     ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    <div class="btn-group ">
+                      <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
                         More Info
                       </button>
                       <ul class="dropdown-menu dropdown-menu-lg-end">
@@ -143,12 +143,12 @@ fetch(URL)
               <hr>
               <figcaption class="blockquote-footer">
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
-                <div class="btn-group">
-                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="true">
+                <div class="btn-group ">
+                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="true">
                     More Info
                   </button>
                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item">Year: ${YEAR}</a></li>
+                    <li><a class="dropdown-item">Year:    ${YEAR}</a></li>
                     <li><a class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
                     <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
                     <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
@@ -188,12 +188,12 @@ fetch(URL)
               <hr>
               <figcaption class="blockquote-footer">
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
-                <div class="btn-group">
-                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                <div class="btn-group ">
+                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
                     More Info
                   </button>
                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item"  >Year: ${YEAR}</a></li>
+                    <li><a class="dropdown-item"  >Year:    ${YEAR}</a></li>
                     <li><a class="dropdown-item" >Runtime: ${item.runtime} mins</a></li>
                     <li><a class="dropdown-item" >Budget: ${item.budget}</a></li>
                     <li><a class="dropdown-item" >Revenue: ${item.revenue}</a></li>
@@ -220,7 +220,7 @@ function generateStarRating(voteAverage) {
   let starsDom = "";
   for (let i = 0; i < maxStars; i++) {
     const starClass = i < rating ? "checked" : "";
-    starsDom += <span class="fa fa-star ${starClass}"></span>;
+    starsDom += `<span class="fa fa-star ${starClass}"></span>`;
   }
   return starsDom;
 }
