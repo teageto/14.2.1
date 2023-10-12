@@ -20,6 +20,7 @@ fetch(URL)
 
       let div = document.createElement('div');
       div.classList.add('dataItem');
+      let starsDom = generateStarRating(item.vote_average)
       let fecha = item.release_date;
       let date = fecha.split('-');
       let YEAR = ""
@@ -36,7 +37,7 @@ fetch(URL)
               <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
-                <footer class="blockquote-footer">${item.vote_average}</footer>
+                <footer class="blockquote-footer">${starsDom}</footer>
               </blockquote>
 
               <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop${i}" aria-labelledby="offcanvasLabel">
@@ -81,7 +82,7 @@ fetch(URL)
               <div class="card-body">
               <blockquote class="blockquote mb-0">
                 <p>${item.tagline}</p>
-                <footer class="blockquote-footer">${item.vote_average}</footer>
+                <footer class="blockquote-footer">${starsDom}</footer>
               </blockquote>
 
               <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop${i}" aria-labelledby="offcanvasLabel">
@@ -126,7 +127,7 @@ fetch(URL)
           <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>${item.tagline}</p>
-            <footer class="blockquote-footer">${item.vote_average}</footer>
+            <footer class="blockquote-footer">${starsDom}</footer>
           </blockquote>
 
           <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop${i}" aria-labelledby="offcanvasLabel">
@@ -171,7 +172,7 @@ fetch(URL)
           <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>${item.tagline}</p>
-            <footer class="blockquote-footer">${item.vote_average}</footer>
+            <footer class="blockquote-footer">${starsDom}</footer>
           </blockquote>
 
           <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop${i}" aria-labelledby="offcanvasLabel">
@@ -212,3 +213,14 @@ fetch(URL)
     });
   });
 });
+
+function generateStarRating(voteAverage) {
+  const maxStars = 5; // Cantidad máxima de estrellas
+  const rating = Math.min(Math.max(voteAverage / 2, 0), maxStars); // Asegura que la valoración esté entre 0 y 5
+  let starsDom = "";
+  for (let i = 0; i < maxStars; i++) {
+    const starClass = i < rating ? "checked" : "";
+    starsDom += <span class="fa fa-star ${starClass}"></span>;
+  }
+  return starsDom;
+}
