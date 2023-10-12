@@ -20,7 +20,12 @@ fetch(URL)
 
       let div = document.createElement('div');
       div.classList.add('dataItem');
-
+      let fecha = item.release_date;
+      let date = fecha.split('-');
+      if( date.length === 3 ){
+        const year = date[0]
+      }
+      
         if(`${item.title}`.toLowerCase().includes(inptValue)) {
           div.innerHTML = `
           <div class="card cardpeli">
@@ -46,6 +51,17 @@ fetch(URL)
                   <hr>
                   <figcaption class="blockquote-footer">
                     ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                      More Info
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-lg-end">
+                      <li><a class="dropdown-item">Year: ${year}</a></li>
+                      <li><a  class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
+                      <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
+                      <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
+                    </ul>
+                  </div>
                   </figcaption>
                 </figure>
               </div>
@@ -80,6 +96,17 @@ fetch(URL)
                   <hr>
                   <figcaption class="blockquote-footer">
                     ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        More Info
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-lg-end">
+                        <li><a class="dropdown-item" >Year: ${year}</a></li>
+                        <li><a class="dropdown-item" >Runtime: ${item.runtime} mins</a></li>
+                        <li><a class="dropdown-item" >Budget: ${item.budget}</a></li>
+                        <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
+                      </ul>
+                    </div>
                   </figcaption>
                 </figure>
               </div>
@@ -114,6 +141,17 @@ fetch(URL)
               <hr>
               <figcaption class="blockquote-footer">
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="true">
+                    More Info
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item">Year: ${year}</a></li>
+                    <li><a class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
+                    <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
+                    <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
+                  </ul>
+                </div>
               </figcaption>
             </figure>
           </div>
@@ -148,6 +186,17 @@ fetch(URL)
               <hr>
               <figcaption class="blockquote-footer">
                 ${item.genres[0].name} - ${item.genres[1].name} - ${item.genres[2].name}
+                <div class="btn-group">
+                  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                    More Info
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-lg-end">
+                    <li><a class="dropdown-item"  >Year: ${year}</a></li>
+                    <li><a class="dropdown-item" >Runtime: ${item.runtime} mins</a></li>
+                    <li><a class="dropdown-item" >Budget: ${item.budget}</a></li>
+                    <li><a class="dropdown-item" >Revenue: ${item.revenue}</a></li>
+                  </ul>
+                </div>
               </figcaption>
             </figure>
           </div>
@@ -159,35 +208,6 @@ fetch(URL)
         i++
       };
     });
-
     });
   });
-});
-
-function generateStarRating(voteAverage) {
-  const maxStars = 5; // Cantidad máxima de estrellas
-  const rating = Math.min(Math.max(voteAverage / 2, 0), maxStars); // Asegura que la valoración esté entre 0 y 5
-  let starsDom = "";
-  for (let i = 0; i < maxStars; i++) {
-    const starClass = i < rating ? "checked" : "";
-    starsDom += <span class="fa fa-star ${starClass}"></span>;
-  }
-  return starsDom;
-}
-
-filteredData.forEach(({ title, tagline, vote_average }) => {
-  const starsDom = generateStarRating(vote_average);
-
-  document.getElementById("list").innerHTML += `
-    <li class="list-group-item d-flex justify-content-between align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom">
-      <div>
-        <h3>${ title }</h3>
-        <p>${ tagline }</p>
-      </div>
-      
-      <div>
-        ${ starsDom }
-      </div>
-    </li>
-  `;
 });
