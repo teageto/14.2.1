@@ -22,8 +22,9 @@ fetch(URL)
       div.classList.add('dataItem');
       let fecha = item.release_date;
       let date = fecha.split('-');
+      let YEAR = ""
       if( date.length === 3 ){
-        const year = date[0]
+         YEAR = date[0]
       }
       
         if(`${item.title}`.toLowerCase().includes(inptValue)) {
@@ -56,7 +57,7 @@ fetch(URL)
                       More Info
                     </button>
                     <ul class="dropdown-menu dropdown-menu-lg-end">
-                      <li><a class="dropdown-item">Year: ${year}</a></li>
+                      <li><a class="dropdown-item">Year: ${YEAR}</a></li>
                       <li><a  class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
                       <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
                       <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
@@ -101,7 +102,7 @@ fetch(URL)
                         More Info
                       </button>
                       <ul class="dropdown-menu dropdown-menu-lg-end">
-                        <li><a class="dropdown-item" >Year: ${year}</a></li>
+                        <li><a class="dropdown-item" >Year: ${YEAR}</a></li>
                         <li><a class="dropdown-item" >Runtime: ${item.runtime} mins</a></li>
                         <li><a class="dropdown-item" >Budget: ${item.budget}</a></li>
                         <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
@@ -146,7 +147,7 @@ fetch(URL)
                     More Info
                   </button>
                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item">Year: ${year}</a></li>
+                    <li><a class="dropdown-item">Year: ${YEAR}</a></li>
                     <li><a class="dropdown-item">Runtime: ${item.runtime} mins</a></li>
                     <li><a class="dropdown-item">Budget: ${item.budget}</a></li>
                     <li><a class="dropdown-item">Revenue: ${item.revenue}</a></li>
@@ -191,7 +192,7 @@ fetch(URL)
                     More Info
                   </button>
                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                    <li><a class="dropdown-item"  >Year: ${year}</a></li>
+                    <li><a class="dropdown-item"  >Year: ${YEAR}</a></li>
                     <li><a class="dropdown-item" >Runtime: ${item.runtime} mins</a></li>
                     <li><a class="dropdown-item" >Budget: ${item.budget}</a></li>
                     <li><a class="dropdown-item" >Revenue: ${item.revenue}</a></li>
